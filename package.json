@@ -1,0 +1,21 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "start": "node fuse.js"
+  },
+  "dependencies": {
+    "glamor": "^2.20.25",
+    "headtrackr": "^0.0.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.30",
+    "@types/react-dom": "^15.5.0",
+    "fuse-box": "^2.1.0",
+    "typescript": "latest"
+  }
+}
