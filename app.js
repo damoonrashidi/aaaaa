@@ -233,7 +233,7 @@ var Map = (function (_super) {
     };
     Map.prototype.paint = function () {
         var _this = this;
-        this.animationFrame = window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
             var ctx = _this.canvas.getContext('2d');
             ctx.clearRect(0, 0, _this.canvasWidth, _this.canvasHeight);
             _this.drawPlayer(ctx);

@@ -10,11 +10,11 @@ let fuse = FuseBox.init({
 });
 
 Sparky.task('default', () => {
-  return Sparky.watch('index.html', {base: 'src'}).dest('./dist')
+  return Sparky.watch('index.html', {base: 'src'}).dest('./')
 });
 
 fuse
-  .bundle('dist/app.js')
+  .bundle('app.js')
   .instructions('> index.tsx')
   // .hmr()
   .watch();
@@ -24,7 +24,7 @@ fuse
   .dev({
     hmr: false,
     port: 4444,
-    root: './dist/'
+    root: './'
   })
 
 fuse.run();
