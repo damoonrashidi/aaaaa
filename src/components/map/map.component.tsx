@@ -100,7 +100,7 @@ export class Map extends React.Component<Props, any> {
   }
 
   paint () {
-    this.animationFrame = window.requestAnimationFrame( () => {
+    window.requestAnimationFrame( () => {
       let ctx = this.canvas.getContext('2d');
       ctx.clearRect(0,0, this.canvasWidth, this.canvasHeight);
       this.drawPlayer(ctx);
