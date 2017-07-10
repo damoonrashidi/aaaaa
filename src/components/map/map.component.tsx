@@ -45,7 +45,6 @@ export class Map extends React.Component<Props, any> {
         20,
         5,
        );
-      console.log(ball.color);
       ball.points = Math.floor(Math.random() * 10 % 5);
       this.balls.push(ball);
     }
@@ -86,7 +85,6 @@ export class Map extends React.Component<Props, any> {
     this.balls.forEach(ball => {
       ball.y += ball.speed;
       if (ball.collidesWithPlayer(this.player)) {
-        console.log(ball.points);
         this.props.onScore(ball.points);
       }
       if (ball.y > this.canvasHeight) {

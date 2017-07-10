@@ -187,7 +187,6 @@ var Map = (function (_super) {
         _this.BALL_COUNT = 5;
         for (var i = 0; i < _this.BALL_COUNT; i++) {
             var ball = new ball_class_1.Ball(Math.random() * 400 % 400, 20, 5);
-            console.log(ball.color);
             ball.points = Math.floor(Math.random() * 10 % 5);
             _this.balls.push(ball);
         }
@@ -219,7 +218,6 @@ var Map = (function (_super) {
         this.balls.forEach(function (ball) {
             ball.y += ball.speed;
             if (ball.collidesWithPlayer(_this.player)) {
-                console.log(ball.points);
                 _this.props.onScore(ball.points);
             }
             if (ball.y > _this.canvasHeight) {
