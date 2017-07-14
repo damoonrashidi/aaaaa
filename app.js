@@ -221,7 +221,7 @@ var Map = (function (_super) {
                 _this.props.onScore(ball.points);
             }
             if (ball.y > _this.canvasHeight) {
-                ball.y = -10;
+                ball.reset();
             }
             ctx.beginPath();
             ctx.fillStyle = ball.color;
@@ -272,6 +272,11 @@ var Ball = (function () {
         this.color = "rgb(\n      " + Math.floor(Math.random() * 255 % 255) + ",\n      " + Math.floor(Math.random() * 255 % 255) + ",\n      " + Math.floor(Math.random() * 255 % 255) + "\n    )";
         this.reference = "ABC123";
     }
+    Ball.prototype.reset = function () {
+        this.y = -10;
+        this.x = Math.floor(Math.random() * 400 % 400);
+        this.speed = Math.max(Math.random() * 10 % 3, 1);
+    };
     Ball.prototype.collidesWithPlayer = function (player) {
         return this.x >= player.x && this.x <= (player.x + player.width) && this.y > player.y;
     };

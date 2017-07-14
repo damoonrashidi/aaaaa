@@ -88,7 +88,7 @@ export class Map extends React.Component<Props, any> {
         this.props.onScore(ball.points);
       }
       if (ball.y > this.canvasHeight) {
-        ball.y  = -10;
+        ball.reset();
       }
       ctx.beginPath();
       ctx.fillStyle = ball.color;

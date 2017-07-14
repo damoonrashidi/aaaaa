@@ -28,6 +28,12 @@ export class Ball {
     this.reference = `ABC123`;
   }
 
+  reset () {
+    this.y = -10;
+    this.x = Math.floor(Math.random() * 400 % 400);
+    this.speed = Math.max(Math.random() * 10 % 3, 1);
+  }
+
   collidesWithPlayer (player: Player): boolean {
     return this.x >= player.x && this.x <= (player.x + player.width) && this.y > player.y;
   }
